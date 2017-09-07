@@ -1,0 +1,25 @@
+site:
+  port: 8081
+  username: 'user'
+  password: '1234'
+
+doors:
+  left:
+    name: 'Left'
+    relay_pin: 23,
+    state_pin: 17,
+    state_pin_closed_value: 0
+    approx_time_to_close: 15
+    approx_time_to_open: 15
+  right:
+    name: 'Right'
+    relay_pin: 24,
+    state_pin: 21,
+    state_pin_closed_value: 0
+    approx_time_to_close: 15
+    approx_time_to_open: 15
+
+config:
+  use_auth: true
+  use_alerts: true
+  use_api: true
