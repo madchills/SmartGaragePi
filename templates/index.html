@@ -11,12 +11,24 @@
   <body>
     <div data-role="page">
       <div data-role="header"> 
-	<h1>{{ name }} Garage Door</h1>
+	<h1>{{ name }} Garage</h1>
       </div>
       <div data-role="content">
 	<div class="content-primary">
-	 <input type="image" src="..\static\closed.png" name="executeDoor" class="btTxt submit" id="executeDoor" /> 
-	</div>
+	  <ul id="doorlist" data-role="listview" class="ui-listview">
+             <li id="left" data-icon="false" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-li-has-thumb ui-li-last ui-btn-up-c"> 
+              <div class="ui-btn-inner ui-li">
+                <div class="ui-btn-text">
+                  <a href="javascript:click('left');" class="ui-link-inherit">
+                    <img src="../static/closed.png" class="ui-li-thumb">
+                    <h3 class="ui-li-heading">{{ name }}</h3>
+                    <p class="ui-li-desc">{{ status }} as of {{ cdate }}</p>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
       <div data-role="footer" data-position="fixed">
 	<h4>
